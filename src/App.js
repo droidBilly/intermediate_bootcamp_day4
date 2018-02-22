@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import Title from './components/Title'
-import Player from './components/Player'
+import Board from './containers/Board'
 
 const players = [
-  { id: 1, name: 'Billy', score: 4 },
+  { id: 1, name: 'Billy', score: 7 },
   { id: 2, name: 'Safidy', score: 6 },
   { id: 3, name: 'Iuliia', score: 3 },
   { id: 4, name: 'Oksana', score: 4 },
@@ -18,12 +18,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Title content="Scoreboard"/>
-        <ul>
-          {players.map((player, index) => <Player key={index} { ...player } />)}
-        </ul>
+          <Board players={players} />
       </div>
-
     );
   }
 }
