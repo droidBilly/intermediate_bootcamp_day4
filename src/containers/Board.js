@@ -11,7 +11,7 @@ export default class Board extends PureComponent {
       <div>
         <Title content="Scoreboard" />
         <ul className="Board">
-          {players.sort((a,b) => b.score > a.score)
+          {players.sort((a,b) => a.score < b.score)
             .map((player, index) => (
             <Player key={index} { ...player } />
           ))}

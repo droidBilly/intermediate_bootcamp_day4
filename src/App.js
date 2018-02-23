@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Title from './components/Title'
 import Board from './containers/Board'
 
 const players = [
